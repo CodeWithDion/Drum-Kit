@@ -1,0 +1,338 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    background: url('https://images.pexels.com/photos/11032527/pexels-photo-11032527.jpeg') no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.drum-kit {
+    width: 1200px;
+    height: 600px;
+    position: relative;
+}
+
+button {
+    cursor: pointer;
+    border: none;
+    outline: none;
+}
+
+button:active {
+    transform: scale(.98);
+}
+
+.kick {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    background: url('images/kick.jpg') no-repeat;
+    background-position: center;
+    background-size: 139%;
+}
+
+.kick.one {
+    position: absolute;
+    bottom: 0;
+    left: 340px;
+}
+
+.kick.two {
+    position: absolute;
+    bottom: 0;
+    right: 340px;
+}
+
+.snare {
+    width: 240px;
+    height: 240px;
+    border-radius: 50%;
+    background: url('images/snarenobg.png') no-repeat;
+    background-position: center;
+    background-size: 165%;
+    position: absolute;
+    left: 480px;
+    bottom: 125px;
+    z-index: 1;
+}
+
+.tom {
+    width: 190px;
+    height: 190px;
+    border-radius: 50%;
+    background-color: rgba(128, 128, 128, 0.197);
+    background: url('images/tom.png') no-repeat;
+    background-position: center;
+    background-size: 110%;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+}
+
+.tom.one {
+    position: absolute;
+    left: 330px;
+    top: 160px;
+    z-index: 2;
+}
+
+.tom.two {
+    position: absolute;
+    left: 505px;
+    top: 100px;
+    z-index: 2;
+}
+
+.tom.three {
+    position: absolute;
+    right: 335px;
+    top: 165px;
+    z-index: 2;
+}
+
+.crash-big {
+    width: 220px;
+    height: 220px;
+    border-radius: 50%;
+    background: url('images/crashnobg.png') no-repeat;
+    background-size: 210%;
+    background-position: center;
+    position: absolute;
+    left: 180px;
+    top: 100px;
+    z-index: 3;
+    box-shadow: 11px 4px 27px 0px rgba(0, 0, 0, 0.62);
+}
+
+.splash {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    background: url('images/splashnobg.png') no-repeat;
+    background-size: 125%;
+    background-position: center;
+    position: absolute;
+    left: 420px;
+    top: 80px;
+    z-index: 3;
+    box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+}
+
+.crash-small {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    background: url('images/crashnobg.png') no-repeat;
+    background-size: 205%;
+    background-position: center;
+    position: absolute;
+    right: 400px;
+    top: 60px;
+    z-index: 3;
+    box-shadow: -4px 7px 20px 0px rgba(0, 0, 0, 0.62);
+}
+
+.ride {
+    width: 220px;
+    height: 220px;
+    border-radius: 50%;
+    background: url('images/ridenobg.png') no-repeat;
+    background-size: 110%;
+    background-position: center;
+    position: absolute;
+    right: 185px;
+    top: 80px;
+    z-index: 4;
+    -webkit-box-shadow: -11px 16px 20px 0px rgba(0, 0, 0, 0.62);
+    box-shadow: -11px 16px 20px 0px rgba(0, 0, 0, 0.4);
+}
+
+.hat {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    background: url('images/hatnobg.png') no-repeat;
+    background-size: 110%;
+    background-position: center;
+}
+
+.close.hat {
+    position: absolute;
+    right: 215px;
+    bottom: 170px;
+    z-index: 1;
+}
+
+.open.hat {
+    position: absolute;
+    right: 180px;
+    bottom: 50px;
+}
+
+ion-icon {
+    font-size: 5rem;
+}
+
+.logo {
+    width: 12rem;
+}
+
+
+/* ||MEDIA QUERIES */
+@media only screen and (max-width: 1200px) {
+    .drum-kit {
+        width: 900px;
+        height: 600px;
+    }
+
+    .kick.one {
+        position: absolute;
+        bottom: 0;
+        left: 195px;
+    }
+
+    .kick.two {
+        position: absolute;
+        bottom: 0;
+        right: 195px;
+    }
+
+    .snare {
+        left: 330px;
+    }
+
+    .tom.one {
+        left: 180px;
+    }
+
+    .tom.two {
+        left: 355px;
+    }
+
+    .tom.three {
+        right: 185px;
+    }
+
+    .crash-big {
+        left: 30px;
+    }
+
+    .splash {
+        left: 270px;
+    }
+
+    .crash-small {
+        right: 250px;
+    }
+
+    .ride {
+        right: 35px;
+    }
+
+    .close.hat {
+        right: 55px;
+    }
+
+    .open.hat {
+        right: 30px;
+    }
+}
+
+@media only screen and (max-width: 950px) {
+    .drum-kit {
+        width: 750px;
+        height: 450px;
+    }
+
+    .kick {
+        width: 210px;
+        height: 210px;
+    }
+
+    .kick.one {
+        position: absolute;
+        bottom: 0;
+        left: 160px;
+    }
+
+    .kick.two {
+        position: absolute;
+        bottom: 0;
+        right: 160px;
+    }
+
+    .snare {
+        width: 200px;
+        height: 200px;
+        left: 275px;
+        bottom: 100px;
+    }
+
+    .tom {
+        width: 150px;
+        height: 150px;
+    }
+
+    .tom.one {
+        left: 170px;
+        top: 90px;
+    }
+
+    .tom.two {
+        left: 300px;
+        top: 30px;
+    }
+
+    .tom.three {
+        right: 170px;
+        top: 90px;
+    }
+
+    .crash-big {
+        width: 180px;
+        height: 180px;
+        left: 40px;
+        top: 35px;
+    }
+
+    .splash {
+        width: 80px;
+        height: 80px;
+        left: 240px;
+        top: 35px;
+    }
+
+    .crash-small {
+        width: 110px;
+        height: 110px;
+        right: 225px;
+        top: 10px;
+    }
+
+    .ride {
+        width: 180px;
+        height: 180px;
+        right: 50px;
+        top: 25px;
+    }
+
+    .hat {
+        width: 110px;
+        height: 110px;
+    }
+
+    .close.hat {
+        right: 70px;
+        bottom: 150px;
+    }
+
+    .open.hat {
+        right: 45px;
+        bottom: 60px;
+    }
+}
